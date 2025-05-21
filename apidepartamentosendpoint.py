@@ -11,8 +11,10 @@ try:
 
         for atraccion in datos:
             nombre = atraccion.get("name", "Nombre no disponible")
-            print(f"Nombre: {nombre}")
-
+            id = atraccion.get("id")
+            poblacion = atraccion.get("population", "Poblacion no disponible")
+            print(f"ID: {id}, Nombre: {nombre}, Población: {poblacion})
+        
     
     else:
         print(f"Error en la solicitud: Código {respuesta.status_code}")
