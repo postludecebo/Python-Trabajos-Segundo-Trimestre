@@ -10,11 +10,11 @@ try:
         datos = respuesta.json()
 
         for atraccion in datos:
-            nombre = atraccion.get("name", "Nombre no disponible")
+            name = atraccion.get("name", "Nombre no disponible")
             id = atraccion.get("id")
-            poblacion = atraccion.get("population", "Poblacion no disponible")
-            print(f"ID: {id}, Nombre: {nombre}, Población: {poblacion})
-        
+            population = atraccion.get("population", "Población no disponible")
+            print(f"ID: {id}, Nombre: {name}, Población: {population}")
+
     
     else:
         print(f"Error en la solicitud: Código {respuesta.status_code}")
